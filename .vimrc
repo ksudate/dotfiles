@@ -1,39 +1,23 @@
 call plug#begin()
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-endwise'
-Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'mattn/vim-goimports'
 call plug#end()
 
 " vim-lsp setting
-"let g:lsp_diagnostics_enabled = 0
+let g:lsp_diagnostics_enabled = 1
 let g:lsp_signs_enabled = 1
 let g:lsp_diagnostics_echo_cursor = 1
+let g:asyncomplete_auto_popup = 1
+let g:asyncomplete_auto_completeopt = 0
+let g:asyncomplete_popup_delay = 200
 
-" clangd setting
-if executable('clangd')
-  au User lsp_setup call lsp#register_server({
-    \ 'name': 'clangd',
-    \ 'cmd': {server_info->['clangd', '-background-index']},
-    \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
-    \ })
-endif
-
-" solargraph setting
-if executable('solargraph')
-  au User lsp_setup call lsp#register_server({
-    \ 'name': 'solargraph',
-    \ 'cmd': {server_info->[&shell, &shellcmdflag, 'solargraph stdio']},
-    \ 'initialization_options': {"diagnostics": "true"},
-    \ 'whitelist': ['ruby'],
-    \ })
-endif
-
-"
 set encoding=utf-8
-set autoread "外部でファイルに変更がされた場合は読みなおす
+set autoread 
 scriptencoding utf-8
 filetype plugin indent on
 syntax enable
@@ -41,11 +25,9 @@ set noswapfile
 syntax on
 set history=200
 
-" 行番号の設定
 set number
 set cursorline
 
-" コピペ
 set clipboard=unnamed
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
@@ -64,7 +46,6 @@ let &t_SI .= "\e[6 q"
 let &t_EI .= "\e[1 q"
 let &t_SR .= "\e[4 q"
 
-" colorscheme
 autocmd ColorScheme * highlight Normal ctermbg=none
 autocmd ColorScheme * highlight EndOfBuffer ctermbg=none
 autocmd ColorScheme * highlight LineNr ctermbg=none
@@ -102,11 +83,6 @@ autocmd FileType c           setlocal sw=2 sts=2 ts=2 et
 autocmd FileType javascript  setlocal sw=2 sts=2 ts=2 et
 autocmd FileType vim         setlocal sw=2 sts=2 ts=2 et
 autocmd FileType zsh         setlocal sw=2 sts=2 ts=2 et
-
-" golang setting
-set rtp+=$GOROOT/misc/vim
-exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
-set completeopt=menu,preview
 
 " NERDTree setting
 map <C-n> :NERDTreeToggle<CR>
