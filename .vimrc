@@ -33,6 +33,8 @@ endif
 
 "
 set encoding=utf-8
+set autoread "外部でファイルに変更がされた場合は読みなおす
+scriptencoding utf-8
 filetype plugin indent on
 syntax enable
 set noswapfile
@@ -84,11 +86,17 @@ set smartindent
 " コマンドライン補完
 set wildmenu
 " タブバー
+set showtabline=1
 hi TabLine ctermfg=White ctermbg=Black
 hi TabLineSel ctermfg=Black ctermbg=White
-
+" 不可視文字の表示
+set listchars=tab:»-,trail:･
+" set list
+hi NonText    ctermbg=None guibg=NONE guifg=None
+hi SpecialKey ctermbg=None guibg=NONE guifg=None
 " 拡張子でインデントを変化
 autocmd FileType ruby        setlocal sw=2 sts=2 ts=2 et
+autocmd FileType go          setlocal sw=2 sts=2 ts=2 et
 autocmd FileType html        setlocal sw=2 sts=2 ts=2 et
 autocmd FileType c           setlocal sw=2 sts=2 ts=2 et
 autocmd FileType javascript  setlocal sw=2 sts=2 ts=2 et
