@@ -6,15 +6,16 @@ Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'mattn/vim-goimports'
+Plug 'mattn/vim-sonictemplate'
 call plug#end()
 
 " vim-lsp setting
-let g:lsp_diagnostics_enabled = 1
-let g:lsp_signs_enabled = 1
-let g:lsp_diagnostics_echo_cursor = 1
-let g:asyncomplete_auto_popup = 1
-let g:asyncomplete_auto_completeopt = 0
-let g:asyncomplete_popup_delay = 200
+"let g:lsp_diagnostics_enabled = 1
+"let g:lsp_signs_enabled = 1
+"let g:lsp_diagnostics_echo_cursor = 1
+"let g:asyncomplete_auto_popup = 1
+"let g:asyncomplete_auto_completeopt = 0
+"let g:asyncomplete_popup_delay = 200
 
 set encoding=utf-8
 set autoread 
@@ -86,3 +87,8 @@ autocmd FileType zsh         setlocal sw=2 sts=2 ts=2 et
 
 " NERDTree setting
 map <C-n> :NERDTreeToggle<CR>
+
+"
+let g:sonictemplate_vim_template_dir = [
+      \ '~/dotfiles/template'
+      \]
