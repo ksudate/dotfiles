@@ -1,7 +1,9 @@
 call plug#begin()
 Plug 'preservim/nerdtree'
-Plug 'tpope/vim-endwise'
 Plug 'prabirshrestha/vim-lsp'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'gkeep/iceberg-dark'
 Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
@@ -21,15 +23,12 @@ set encoding=utf-8
 set autoread 
 scriptencoding utf-8
 filetype plugin indent on
-syntax enable
 set noswapfile
-syntax on
 set history=200
-
 set number
 set cursorline
-
 set clipboard=unnamed
+set backspace=indent,eol,start
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
@@ -47,11 +46,24 @@ let &t_SI .= "\e[6 q"
 let &t_EI .= "\e[1 q"
 let &t_SR .= "\e[4 q"
 
-autocmd ColorScheme * highlight Normal ctermbg=none
-autocmd ColorScheme * highlight EndOfBuffer ctermbg=none
-autocmd ColorScheme * highlight LineNr ctermbg=none
+syntax enable
+set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+set background=dark
 colorscheme iceberg
-highlight lCursor ctermfg=15 ctermbg=15
+let g:airline_theme='icebergDark'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_section_a = airline#section#create(['mode'])
+let g:airline#extensions#default#layout = [
+  \ [ 'a', 'c' ],
+  \ [ 'z']
+  \ ]
+let g:airline_section_z = airline#section#create(['linenr'])
+let g:airline#extensions#tabline#tab_nr_type = 1
+let g:airline#extensions#tabline#show_tab_count = 0
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#show_buffers = 0
 
 " 括弧入力時の対応する括弧を表示
 set showmatch
@@ -69,13 +81,9 @@ set smartindent
 set wildmenu
 " タブバー
 set showtabline=1
-hi TabLine ctermfg=White ctermbg=Black
-hi TabLineSel ctermfg=Black ctermbg=White
 " 不可視文字の表示
 set listchars=tab:»-,trail:･
-" set list
-hi NonText    ctermbg=None guibg=NONE guifg=None
-hi SpecialKey ctermbg=None guibg=NONE guifg=None
+
 " 拡張子でインデントを変化
 autocmd FileType ruby        setlocal sw=2 sts=2 ts=2 et
 autocmd FileType go          setlocal sw=2 sts=2 ts=2 et
@@ -88,7 +96,6 @@ autocmd FileType zsh         setlocal sw=2 sts=2 ts=2 et
 " NERDTree setting
 map <C-n> :NERDTreeToggle<CR>
 
-"
 let g:sonictemplate_vim_template_dir = [
       \ '~/dotfiles/template'
       \]
