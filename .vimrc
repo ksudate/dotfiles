@@ -9,6 +9,8 @@ Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'mattn/vim-goimports'
 Plug 'mattn/vim-sonictemplate'
+Plug 'thinca/vim-quickrun'
+Plug 'ConradIrwin/vim-bracketed-paste'
 call plug#end()
 
 " vim-lsp setting
