@@ -14,12 +14,9 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 call plug#end()
 
 " vim-lsp setting
-"let g:lsp_diagnostics_enabled = 1
-"let g:lsp_signs_enabled = 1
-"let g:lsp_diagnostics_echo_cursor = 1
-"let g:asyncomplete_auto_popup = 1
-"let g:asyncomplete_auto_completeopt = 0
-"let g:asyncomplete_popup_delay = 200
+let g:lsp_diagnostics_enabled = 1
+let g:lsp_signs_enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1
 function! s:on_lsp_buffer_enabled() abort
   setlocal omnifunc=lsp#complete
   setlocal signcolumn=yes
@@ -29,13 +26,13 @@ function! s:on_lsp_buffer_enabled() abort
   nmap <buffer> gi <plug>(lsp-implementation)
   nmap <buffer> gt <plug>(lsp-type-definition)
   nmap <buffer> <leader>rn <plug>(lsp-rename)
-  nmap <buffer> [g
-  <Plug>(lsp-previous-diagnostic)
-  nmap <buffer> ]g
-  <Plug>(lsp-next-diagnostic)
+"  nmap <buffer> [g
+"  <Plug>(lsp-previous-diagnostic)
+"  nmap <buffer> ]g
+"  <Plug>(lsp-next-diagnostic)
   nmap <buffer> K <plug>(lsp-hover)
-
 endfunction
+let mapleader = "\<Space>"
 
 augroup lsp_install
   au!
@@ -43,7 +40,7 @@ augroup lsp_install
 augroup END
 
 set encoding=utf-8
-set autoread 
+set autoread
 scriptencoding utf-8
 filetype plugin indent on
 set noswapfile
@@ -52,16 +49,7 @@ set number
 set cursorline
 set clipboard=unnamed
 set backspace=indent,eol,start
-cnoremap <C-p> <Up>
-cnoremap <C-n> <Down>
 
-" 括弧補完
-"inoremap { {}<LEFT>
-"inoremap {<Enter> {}<LEFT><CR><BS><ESC><S-o>
-"inoremap ( ()<LEFT>
-"inoremap (<Enter> ()<LEFT><CR><BS><ESC><S-o>
-"inoremap [ []<LEFT>
-"inoremap [<Enter> []<LEFT><CR><BS><ESC><S-o>
 nnoremap <CR> A<CR><ESC>
 
 " 縦棒カーソル
@@ -88,25 +76,26 @@ let g:airline#extensions#tabline#show_tab_count = 0
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_buffers = 0
 
-" 括弧入力時の対応する括弧を表示
 set showmatch
-" ステータスラインを常に表示
 set laststatus=2
-" 編集中のファイルが変更されたら自動で読み直す
 set autoread
-" ビープ音を可視化
 set visualbell
 " 改行時に前の行のインデントを計測
 set autoindent
 " {があると次の行は自動で1段深く自動インデントしてくれる
 set smartindent
-" コマンドライン補完
 set wildmenu
-" タブバー
 set showtabline=1
-" 不可視文字の表示
 set listchars=tab:»-,trail:･
-
+set foldmethod=indent
+autocmd BufRead * normal zR
+" 空白
+autocmd BufWritePre * :%s/\s\+$//ge
+augroup HighlightTrailingSpaces
+  autocmd!
+  autocmd VimEnter,WinEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
+  autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
+augroup END
 " 拡張子でインデントを変化
 autocmd FileType ruby        setlocal sw=2 sts=2 ts=2 et
 autocmd FileType go          setlocal sw=2 sts=2 ts=2 et
@@ -115,7 +104,8 @@ autocmd FileType c           setlocal sw=2 sts=2 ts=2 et
 autocmd FileType javascript  setlocal sw=2 sts=2 ts=2 et
 autocmd FileType vim         setlocal sw=2 sts=2 ts=2 et
 autocmd FileType zsh         setlocal sw=2 sts=2 ts=2 et
-
+autocmd FileType yml         setlocal sw=2 sts=2 ts=2 et
+autocmd FileType yaml        setlocal sw=2 sts=2 ts=2 et
 " NERDTree setting
 map <C-n> :NERDTreeToggle<CR>
 
