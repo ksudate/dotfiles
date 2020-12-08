@@ -11,6 +11,8 @@ Plug 'mattn/vim-goimports'
 Plug 'mattn/vim-sonictemplate'
 Plug 'thinca/vim-quickrun'
 Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " vim-lsp setting
