@@ -55,6 +55,8 @@ alias drun='docker container run --rm -d'
 alias drunit='docker container run --rm -it'
 alias dstop='docker container stop $(dcur)'
 alias tmuxa='tmux new-session \; source-file ~/.tmux/new_session'
+# k8s alias
+alias k='kubectl'
 export PATH="$PATH:~/.bin"
 export PATH="$PATH:~/go/src/github.com/tmrekk121/prog/env"
 
