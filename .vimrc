@@ -13,6 +13,9 @@ Plug 'thinca/vim-quickrun'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 " vim-lsp setting
@@ -40,6 +43,12 @@ augroup lsp_install
   au!
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
+" vimgrep
+nnoremap [q :cprevious<CR>
+nnoremap ]q :cnext<CR>
+nnoremap [Q :<C-u>cfirst<CR>
+nnoremap ]Q :<C-u>clast<CR>
 
 set encoding=utf-8
 set autoread
