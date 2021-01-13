@@ -1,0 +1,10 @@
+[package]
+disabled = true
+[aws]
+format = "on [$symbol$profile]($style) "
+style = "bold blue"
+[gcloud]
+disabled = true
+[directory]
+truncation_length = 100
+truncate_to_repo = false

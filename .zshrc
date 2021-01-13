@@ -64,9 +64,10 @@ export PATH="$PATH:~/.bin"
 export PATH="$PATH:~/go/src/github.com/tmrekk121/prog/env"
 
 # pure settings
-fpath+=$HOME/.zsh/pure
-autoload -U promptinit; promptinit
-prompt pure
+#fpath+=$HOME/.zsh/pure
+#autoload -U promptinit; promptinit
+#prompt pure
+eval "$(starship init zsh)"
 
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export LLVM_DIR=/usr/local/Cellar/llvm/9.0.1/lib/cmake
