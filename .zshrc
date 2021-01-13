@@ -57,6 +57,13 @@ alias dstop='docker container stop $(dcur)'
 alias tmuxa='tmux new-session \; source-file ~/.tmux/new_session'
 # k8s alias
 alias k='kubectl'
+# git alias
+alias g='git'
+alias diff='git diff'
+alias pull='git pull'
+alias push='git push origin HEAD'
+alias st='git status'
+
 export PATH="$PATH:~/.bin"
 export PATH="$PATH:~/go/src/github.com/tmrekk121/prog/env"
 
@@ -96,3 +103,4 @@ if [ -f '/Users/e175754/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/e175754
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/e175754/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/e175754/google-cloud-sdk/completion.zsh.inc'; fi
 source <(kubectl completion zsh)
+source <(helm completion zsh)
