@@ -59,10 +59,7 @@ alias tmuxa='tmux new-session \; source-file ~/.tmux/new_session'
 alias k='kubectl'
 # git alias
 alias g='git'
-alias diff='git diff'
-alias pull='git pull'
-alias push='git push origin HEAD'
-alias st='git status'
+alias push='push origin HEAD'
 
 export PATH="$PATH:~/.bin"
 export PATH="$PATH:~/go/src/github.com/tmrekk121/prog/env"
