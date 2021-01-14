@@ -40,6 +40,7 @@ alias mk='sh mk.sh'
 alias ls='ls -FG'
 alias ll='ls -lFG'
 alias lla='ls -laFG'
+alias relogin='exec $SHELL -l'
 # brew path
 alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin brew"
 # Rails　関連
