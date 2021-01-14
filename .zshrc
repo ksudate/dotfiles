@@ -59,6 +59,9 @@ alias tmuxa='tmux new-session \; source-file ~/.tmux/new_session'
 alias k='kubectl'
 # git alias
 alias g='git'
+# aws
+alias pf="env | grep AWS"
+alias awsp="source _awsp"
 
 export PATH="$PATH:~/.bin"
 export PATH="$PATH:~/go/src/github.com/tmrekk121/prog/env"
