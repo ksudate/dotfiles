@@ -1,0 +1,7 @@
+tools:
+  yaml-yamllint: &yaml-yamllint
+    lint-command: 'yamllint -f parsable -'
+    lint-stdin: true
+languages:
+  yaml:
+    - <<: *yaml-yamllint

@@ -16,6 +16,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'skanehira/preview-markdown.vim'
 call plug#end()
 
 " vim-lsp setting
@@ -31,10 +32,6 @@ function! s:on_lsp_buffer_enabled() abort
   nmap <buffer> gi <plug>(lsp-implementation)
   nmap <buffer> gt <plug>(lsp-type-definition)
   nmap <buffer> <leader>rn <plug>(lsp-rename)
-"  nmap <buffer> [g
-"  <Plug>(lsp-previous-diagnostic)
-"  nmap <buffer> ]g
-"  <Plug>(lsp-next-diagnostic)
   nmap <buffer> K <plug>(lsp-hover)
 endfunction
 let mapleader = "\<Space>"
@@ -43,6 +40,23 @@ augroup lsp_install
   au!
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
+" yaml-language-server
+let g:lsp_settings = {
+  \  'efm-langserver': {
+  \    'disabled': v:false,
+  \  },
+  \  'yaml-language-server': {
+  \     'workspace_config': {
+  \       'yaml': {
+  \         'customTags': [
+  \           '!Sub',
+  \           '!Ref',
+  \         ],
+  \       },
+  \     },
+  \   },
+  \ }
 
 " vimgrep
 nnoremap [q :cprevious<CR>
