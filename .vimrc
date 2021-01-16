@@ -137,3 +137,5 @@ map <C-n> :NERDTreeToggle<CR>
 let g:sonictemplate_vim_template_dir = [
       \ '~/dotfiles/template'
       \]
+" preview markdown setting
+let g:preview_markdown_vertical = 1
