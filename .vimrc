@@ -16,7 +16,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'skanehira/preview-markdown.vim'
+Plug 'tmrekk121/prev-md.vim'
 call plug#end()
 
 " vim-lsp setting
@@ -113,6 +113,7 @@ set wildmenu
 set showtabline=1
 set listchars=tab:»-,trail:･
 set foldmethod=indent
+set splitright
 autocmd BufRead * normal zR
 " 空白
 autocmd BufWritePre * :%s/\s\+$//ge
@@ -137,5 +138,3 @@ map <C-n> :NERDTreeToggle<CR>
 let g:sonictemplate_vim_template_dir = [
       \ '~/dotfiles/template'
       \]
-" preview markdown setting
-let g:preview_markdown_vertical = 1

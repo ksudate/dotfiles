@@ -1,0 +1,15 @@
+[push]
+	default = current
+[user]
+	name = tmrekk121
+	email = tmrekk121@outlook.jp
+[core]
+	autoCRLF = false
+[ghq]
+	root = ~/go/src
+[alias]
+	a = add
+	b = branch
+	c = commit
+	d = diff
+	s = status
