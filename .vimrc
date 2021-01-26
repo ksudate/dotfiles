@@ -1,22 +1,22 @@
 call plug#begin()
-Plug 'preservim/nerdtree'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'gkeep/iceberg-dark'
-Plug 'mattn/vim-lsp-settings'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'mattn/vim-goimports'
-Plug 'mattn/vim-sonictemplate'
-Plug 'thinca/vim-quickrun'
-Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'easymotion/vim-easymotion'
-Plug 'tmrekk121/prev-md.vim'
+  Plug 'preservim/nerdtree'
+  Plug 'prabirshrestha/vim-lsp'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'gkeep/iceberg-dark'
+  Plug 'mattn/vim-lsp-settings'
+  Plug 'prabirshrestha/asyncomplete.vim'
+  Plug 'prabirshrestha/asyncomplete-lsp.vim'
+  Plug 'mattn/vim-goimports'
+  Plug 'mattn/vim-sonictemplate'
+  Plug 'thinca/vim-quickrun'
+  Plug 'ConradIrwin/vim-bracketed-paste'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-fugitive'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+  Plug 'easymotion/vim-easymotion'
+  Plug 'tmrekk121/prev-md.vim'
 call plug#end()
 
 " vim-lsp setting
@@ -103,7 +103,6 @@ let g:airline#extensions#tabline#show_buffers = 0
 
 set showmatch
 set laststatus=2
-set autoread
 set visualbell
 " 改行時に前の行のインデントを計測
 set autoindent
