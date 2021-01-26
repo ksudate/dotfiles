@@ -112,7 +112,6 @@ set smartindent
 set wildmenu
 set showtabline=1
 set listchars=tab:»-,trail:･
-set foldmethod=indent
 set splitright
 autocmd BufRead * normal zR
 " 空白
