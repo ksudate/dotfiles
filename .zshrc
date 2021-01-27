@@ -68,6 +68,8 @@ alias awsp="source _awsp"
 
 export PATH="$PATH:~/.bin"
 export PATH="$PATH:~/go/src/github.com/tmrekk121/prog/env"
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 
 # pure settings
 #fpath+=$HOME/.zsh/pure

@@ -128,6 +128,7 @@ autocmd FileType c           setlocal sw=2 sts=2 ts=2 et
 autocmd FileType javascript  setlocal sw=2 sts=2 ts=2 et
 autocmd FileType vim         setlocal sw=2 sts=2 ts=2 et
 autocmd FileType zsh         setlocal sw=2 sts=2 ts=2 et
+autocmd FileType sh         setlocal sw=2 sts=2 ts=2 et
 autocmd FileType yml         setlocal sw=2 sts=2 ts=2 et
 autocmd FileType yaml        setlocal sw=2 sts=2 ts=2 et
 " NERDTree setting
