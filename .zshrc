@@ -77,6 +77,9 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 #prompt pure
 eval "$(starship init zsh)"
 
+# zsh completions
+fpath=(path/to/zsh-completions/src $fpath)
+
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export LLVM_DIR=/usr/local/Cellar/llvm/9.0.1/lib/cmake
 
