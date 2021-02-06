@@ -68,12 +68,17 @@ alias awsp="source _awsp"
 
 export PATH="$PATH:~/.bin"
 export PATH="$PATH:~/go/src/github.com/tmrekk121/prog/env"
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 
 # pure settings
 #fpath+=$HOME/.zsh/pure
 #autoload -U promptinit; promptinit
 #prompt pure
 eval "$(starship init zsh)"
+
+# zsh completions
+fpath=(path/to/zsh-completions/src $fpath)
 
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export LLVM_DIR=/usr/local/Cellar/llvm/9.0.1/lib/cmake
