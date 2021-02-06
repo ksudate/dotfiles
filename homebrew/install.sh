@@ -28,6 +28,9 @@ brew install kubectx
 brew install yamllint
 brew install shellcheck
 brew install shfmt
+# font
+brew tap sanemat/font
+brew install ricty --with-powerline
 # lang
 brew install nodebrew
 brew install go
