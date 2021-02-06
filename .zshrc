@@ -12,7 +12,7 @@ fi
 
 # vim path
 export EDITOR=vim
-export PATH="/usr/local/Cellar/vim/8.2.1350/bin:$PATH"
+#export PATH="/usr/local/Cellar/vim/8.2.1350/bin:$PATH"
 export PATH="/Users/e175754/Library/Python/3.8/bin:$PATH"
 # python path settings
 export PATH="/usr/local/opt/python@3.8/libexec/bin:$PATH"
@@ -107,3 +107,4 @@ if [ -f '/Users/e175754/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/e175754
 if [ -f '/Users/e175754/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/e175754/google-cloud-sdk/completion.zsh.inc'; fi
 source <(kubectl completion zsh)
 source <(helm completion zsh)
+test -e /Users/e175754/.iterm2_shell_integration.zsh && source /Users/e175754/.iterm2_shell_integration.zsh || true
