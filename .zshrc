@@ -60,6 +60,7 @@ alias dstop='docker container stop $(dcur)'
 alias tmuxa='tmux new-session \; source-file ~/.tmux/new_session'
 # k8s alias
 alias k='kubectl'
+alias kc='kubectx | peco | xargs kubectx'
 # git alias
 alias g='git'
 # aws
@@ -112,3 +113,6 @@ if [ -f '/Users/e175754/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/e175754
 if [ -f '/Users/e175754/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/e175754/google-cloud-sdk/completion.zsh.inc'; fi
 source <(kubectl completion zsh)
 source <(helm completion zsh)
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
