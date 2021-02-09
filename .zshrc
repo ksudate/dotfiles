@@ -12,7 +12,7 @@ fi
 
 # vim path
 export EDITOR=vim
-export PATH="/usr/local/Cellar/vim/8.2.1350/bin:$PATH"
+#export PATH="/usr/local/Cellar/vim/8.2.1350/bin:$PATH"
 export PATH="/Users/e175754/Library/Python/3.8/bin:$PATH"
 # python path settings
 export PATH="/usr/local/opt/python@3.8/libexec/bin:$PATH"
@@ -116,4 +116,3 @@ source <(kubectl completion zsh)
 source <(helm completion zsh)
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
