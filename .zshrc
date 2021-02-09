@@ -61,6 +61,7 @@ alias tmuxa='tmux new-session \; source-file ~/.tmux/new_session'
 # k8s alias
 alias k='kubectl'
 alias kc='kubectx | peco | xargs kubectx'
+alias kn='kubens | peco | xargs kubens'
 # git alias
 alias g='git'
 # aws
