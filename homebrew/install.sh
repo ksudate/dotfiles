@@ -21,6 +21,7 @@ brew install starship
 brew install jq
 brew install peco
 brew install ghq
+brew install tree
 # k8s related
 brew install k9s
 brew install kubectx
