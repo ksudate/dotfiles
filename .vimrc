@@ -137,3 +137,6 @@ map <C-n> :NERDTreeToggle<CR>
 let g:sonictemplate_vim_template_dir = [
       \ '~/dotfiles/template'
       \]
+
+let g:auto_prev_time = 7000
+let g:prev_md_auto_update = 1

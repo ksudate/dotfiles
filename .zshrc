@@ -12,10 +12,7 @@ fi
 
 # vim path
 export EDITOR=vim
-#export PATH="/usr/local/Cellar/vim/8.2.1350/bin:$PATH"
 export PATH="/Users/e175754/Library/Python/3.8/bin:$PATH"
-# python path settings
-export PATH="/usr/local/opt/python@3.8/libexec/bin:$PATH"
 # rbenv path settings
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"
@@ -69,7 +66,6 @@ alias pf="env | grep AWS"
 alias awsp="source _awsp"
 
 export PATH="$PATH:~/.bin"
-export PATH="$PATH:~/go/src/github.com/tmrekk121/prog/env"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 
@@ -82,7 +78,6 @@ eval "$(starship init zsh)"
 # zsh completions
 fpath=(path/to/zsh-completions/src $fpath)
 
-export PATH="/usr/local/opt/llvm/bin:$PATH"
 export LLVM_DIR=/usr/local/Cellar/llvm/9.0.1/lib/cmake
 
 bindkey -M viins '^A'  beginning-of-line
@@ -116,3 +111,8 @@ source <(kubectl completion zsh)
 source <(helm completion zsh)
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# mikanos tmp
+PATH=/usr/local/opt/llvm@9/bin:$PATH
+PATH=/usr/local/opt/binutils/bin:$PATH
+PATH=/usr/local/Cellar/dosfstools/4.2/sbin:$PATH
