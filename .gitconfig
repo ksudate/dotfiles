@@ -13,3 +13,4 @@
 	c = commit
 	d = diff
 	s = status
+	co = checkout

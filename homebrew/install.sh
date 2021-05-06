@@ -13,13 +13,17 @@ brew install --cask notion
 brew install --cask deepl
 
 brew install git
+brew install tig
 brew install zsh
 brew install zsh-completions
 brew install vim
+brew install coreutils
 brew install tmux
 brew install starship
 brew install jq
 brew install peco
+brew install fzf
+
 brew install ghq
 # k8s related
 brew install k9s
