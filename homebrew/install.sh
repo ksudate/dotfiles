@@ -11,6 +11,8 @@ brew install --cask docker
 brew install --cask zoomus
 brew install --cask notion
 brew install --cask deepl
+brew install --cask clipy
+brew install --cask biscuit
 
 brew install git
 brew install zsh
