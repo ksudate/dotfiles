@@ -1,5 +1,4 @@
 call plug#begin()
-  Plug 'preservim/nerdtree'
   Plug 'prabirshrestha/vim-lsp'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
@@ -17,6 +16,7 @@ call plug#begin()
   Plug 'junegunn/fzf.vim'
   Plug 'easymotion/vim-easymotion'
   Plug 'tmrekk121/prev-md.vim'
+  Plug 'lambdalisue/fern.vim'
 call plug#end()
 
 " vim-lsp setting
@@ -71,7 +71,7 @@ filetype plugin indent on
 set noswapfile
 set history=200
 set number
-set cursorline
+"set cursorline
 set clipboard=unnamed
 set backspace=indent,eol,start
 
@@ -100,16 +100,15 @@ let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline#extensions#tabline#show_tab_count = 0
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_buffers = 0
+"let g:airline_disable_statusline = 1
 
 set showmatch
-set laststatus=2
 set visualbell
 " 改行時に前の行のインデントを計測
 set autoindent
 " {があると次の行は自動で1段深く自動インデントしてくれる
 set smartindent
 set wildmenu
-set showtabline=1
 set listchars=tab:»-,trail:･
 set splitright
 autocmd BufRead * normal zR
@@ -131,8 +130,8 @@ autocmd FileType zsh         setlocal sw=2 sts=2 ts=2 et
 autocmd FileType sh         setlocal sw=2 sts=2 ts=2 et
 autocmd FileType yml         setlocal sw=2 sts=2 ts=2 et
 autocmd FileType yaml        setlocal sw=2 sts=2 ts=2 et
-" NERDTree setting
-map <C-n> :NERDTreeToggle<CR>
+" Fern setting
+map <C-n> :Fern . -drawer -toggle<CR>
 
 let g:sonictemplate_vim_template_dir = [
       \ '~/dotfiles/template'
