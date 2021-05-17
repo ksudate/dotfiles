@@ -25,6 +25,7 @@ brew install starship
 brew install jq
 brew install peco
 brew install fzf
+brew install watch
 
 brew install ghq
 brew install tree
