@@ -134,7 +134,8 @@ autocmd FileType yaml        setlocal sw=2 sts=2 ts=2 et
 map <C-n> :Fern . -drawer -toggle<CR>
 " Quickrun Setting
 map <leader>q :QuickRun<CR>
-
+" git Setting
+nnoremap <leader>ga :Git add .<CR>
 let g:sonictemplate_vim_template_dir = [
       \ '~/dotfiles/template'
       \]
