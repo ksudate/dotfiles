@@ -134,7 +134,7 @@ autocmd FileType yaml        setlocal sw=2 sts=2 ts=2 et
 map <C-n> :Fern . -drawer -toggle<CR>
 " Quickrun Setting
 map <leader>q :QuickRun<CR>
-" git Setting
+" vim-fugitive Setting
 nnoremap <leader>ga :Git add .<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gp :Gpush<CR>
