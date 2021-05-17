@@ -136,6 +136,8 @@ map <C-n> :Fern . -drawer -toggle<CR>
 map <leader>q :QuickRun<CR>
 " git Setting
 nnoremap <leader>ga :Git add .<CR>
+nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gp :Gpush<CR>
 let g:sonictemplate_vim_template_dir = [
       \ '~/dotfiles/template'
       \]
