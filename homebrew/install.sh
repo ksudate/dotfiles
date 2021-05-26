@@ -32,6 +32,7 @@ brew install tree
 # k8s related
 brew install k9s
 brew install kubectx
+brew install helm
 # linter
 brew install yamllint
 brew install shellcheck
