@@ -33,6 +33,7 @@ brew install tree
 brew install k9s
 brew install kubectx
 brew install helm
+brew install aquasecurity/trivy/trivy
 # linter
 brew install yamllint
 brew install shellcheck
