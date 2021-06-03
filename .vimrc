@@ -51,6 +51,7 @@ let g:lsp_settings = {
   \       'yaml': {
   \         'customTags': [
   \           '!GetAtt',
+  \           '!Equals',
   \           '!ImportValue',
   \           '!Ref',
   \           '!Sub',
