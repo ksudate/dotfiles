@@ -50,8 +50,10 @@ let g:lsp_settings = {
   \     'workspace_config': {
   \       'yaml': {
   \         'customTags': [
-  \           '!Sub',
+  \           '!GetAtt',
+  \           '!ImportValue',
   \           '!Ref',
+  \           '!Sub',
   \         ],
   \       },
   \     },
