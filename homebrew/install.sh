@@ -26,9 +26,10 @@ brew install jq
 brew install peco
 brew install fzf
 brew install pwgen
-
 brew install ghq
 brew install tree
+# terraform related
+brew install tfenv
 # k8s related
 brew install k9s
 brew install kubectx
