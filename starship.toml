@@ -1,5 +1,9 @@
 [package]
 disabled = true
+[kubernetes]
+format = 'on [⛵ $context \($namespace\)]($style) '
+style = "bold green"
+disabled = false
 [aws]
 format = "on [$symbol$profile]($style) "
 style = "bold blue"
