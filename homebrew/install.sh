@@ -13,6 +13,7 @@ brew install --cask notion
 brew install --cask deepl
 brew install --cask clipy
 brew install --cask biscuit
+brew install --cask visual-studio-code
 
 brew install git
 brew install tig
@@ -30,6 +31,8 @@ brew install ghq
 brew install tree
 # terraform related
 brew install tfenv
+# cloudformation related
+brew install cfn-lint
 # k8s related
 brew install k9s
 brew install kubectx
