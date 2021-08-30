@@ -109,6 +109,8 @@ nnoremap [q :cprevious<CR>
 nnoremap ]q :cnext<CR>
 nnoremap [Q :<C-u>cfirst<CR>
 nnoremap ]Q :<C-u>clast<CR>
+" delete line without clipping
+nnoremap d "_d
 
 set encoding=utf-8
 set autoread
