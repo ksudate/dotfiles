@@ -116,3 +116,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 PATH=/usr/local/opt/llvm@9/bin:$PATH
 PATH=/usr/local/opt/binutils/bin:$PATH
 PATH=/usr/local/Cellar/dosfstools/4.2/sbin:$PATH
+
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+. /usr/local/opt/asdf/asdf.sh

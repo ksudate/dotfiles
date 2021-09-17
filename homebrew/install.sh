@@ -39,6 +39,7 @@ brew install kubectx
 brew install helm
 brew install aquasecurity/trivy/trivy
 brew install conftest
+brew install stern
 # linter
 brew install yamllint
 brew install shellcheck

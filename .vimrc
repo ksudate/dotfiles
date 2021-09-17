@@ -6,7 +6,6 @@ call plug#begin()
   Plug 'mattn/vim-lsp-settings'
   Plug 'prabirshrestha/asyncomplete.vim'
   Plug 'prabirshrestha/asyncomplete-lsp.vim'
-  Plug 'mattn/vim-goimports'
   Plug 'mattn/vim-sonictemplate'
   Plug 'thinca/vim-quickrun'
   Plug 'ConradIrwin/vim-bracketed-paste'
@@ -34,6 +33,7 @@ function! s:on_lsp_buffer_enabled() abort
   nmap <buffer> <leader>rn <plug>(lsp-rename)
   nmap <buffer> K <plug>(lsp-hover)
 endfunction
+autocmd BufWritePre *.go call execute('LspDocumentFormatSync')
 let mapleader = "\<Space>"
 
 augroup lsp_install
@@ -49,6 +49,8 @@ let g:lsp_settings = {
   \  'yaml-language-server': {
   \     'workspace_config': {
   \       'yaml': {
+  \         'format': { 'enable': v:true },
+  \         'hover': v:true,
   \         'customTags': [
   \            '!And scalar',
   \            '!And mapping',
@@ -109,8 +111,6 @@ nnoremap [q :cprevious<CR>
 nnoremap ]q :cnext<CR>
 nnoremap [Q :<C-u>cfirst<CR>
 nnoremap ]Q :<C-u>clast<CR>
-" delete line without clipping
-nnoremap d "_d
 
 set encoding=utf-8
 set autoread
