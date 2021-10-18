@@ -15,20 +15,21 @@ brew install --cask clipy
 brew install --cask biscuit
 brew install --cask visual-studio-code
 
-brew install git
-brew install tig
-brew install zsh
-brew install zsh-completions
-brew install vim
 brew install coreutils
-brew install tmux
-brew install starship
+brew install fzf
+brew install ghq
+brew install git
 brew install jq
 brew install peco
-brew install fzf
 brew install pwgen
-brew install ghq
+brew install redis
+brew install starship
+brew install tig
+brew install tmux
 brew install tree
+brew install vim
+brew install zsh
+brew install zsh-completions
 # terraform related
 brew install tfenv
 # cloudformation related
@@ -40,6 +41,7 @@ brew install helm
 brew install aquasecurity/trivy/trivy
 brew install conftest
 brew install stern
+brew install asdf
 # linter
 brew install yamllint
 brew install shellcheck

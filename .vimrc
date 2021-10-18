@@ -16,6 +16,7 @@ call plug#begin()
   Plug 'easymotion/vim-easymotion'
   Plug 'tmrekk121/prev-md.vim'
   Plug 'lambdalisue/fern.vim'
+  Plug 'bkad/CamelCaseMotion'
 call plug#end()
 
 " vim-lsp setting
@@ -194,3 +195,5 @@ let g:sonictemplate_vim_template_dir = [
 
 let g:auto_prev_time = 7000
 let g:prev_md_auto_update = 1
+
+let g:camelcasemotion_key = '<leader>'
