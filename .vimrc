@@ -157,6 +157,12 @@ set visualbell
 set autoindent
 " {があると次の行は自動で1段深く自動インデントしてくれる
 set smartindent
+set expandtab
+set hlsearch
+set ignorecase
+set incsearch
+set smartcase
+
 set wildmenu
 set listchars=tab:»-,trail:･
 set splitright
