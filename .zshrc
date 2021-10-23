@@ -62,6 +62,7 @@ alias kc='kubectx | peco | xargs kubectx'
 alias kn='kubens | peco | xargs kubens'
 # git alias
 alias g='git'
+alias gc='git b | peco | xargs git co'
 # aws
 alias pf="env | grep AWS"
 alias awsp="source _awsp"

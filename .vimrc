@@ -120,6 +120,9 @@ filetype plugin indent on
 set noswapfile
 set history=200
 set number
+set scrolloff=3
+set lazyredraw
+set ttyfast
 "set cursorline
 set clipboard=unnamed
 set backspace=indent,eol,start
@@ -191,7 +194,7 @@ map <C-n> :Fern . -drawer -toggle<CR>
 map <leader>q :QuickRun<CR>
 " vim-fugitive Setting
 nnoremap <leader>ga :Git add .<CR>
-nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gc :Git commit<CR>
 nnoremap <leader>gp :Gpush<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gl :Glog<CR>
@@ -203,3 +206,4 @@ let g:auto_prev_time = 7000
 let g:prev_md_auto_update = 1
 
 let g:camelcasemotion_key = '<leader>'
+nmap <Esc><Esc> :nohl<CR>
