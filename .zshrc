@@ -42,7 +42,9 @@ alias ll='ls -lFG'
 alias lla='ls -laFG'
 alias relogin='exec $SHELL -l'
 # brew path
-alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin brew"
+if [ $(uname -m) = 'x86_64' ]; then
+  alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin brew"
+fi
 # Rails　関連
 alias rs='bundle exec rails'
 # docker 関連
