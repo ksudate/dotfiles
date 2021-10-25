@@ -195,9 +195,9 @@ map <leader>q :QuickRun<CR>
 " vim-fugitive Setting
 nnoremap <leader>ga :Git add .<CR>
 nnoremap <leader>gc :Git commit<CR>
-nnoremap <leader>gp :Gpush<CR>
+nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gd :Gdiff<CR>
-nnoremap <leader>gl :Glog<CR>
+nnoremap <leader>gl :Gclog<CR>
 let g:sonictemplate_vim_template_dir = [
       \ '~/dotfiles/template'
       \]
