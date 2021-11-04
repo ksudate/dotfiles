@@ -18,6 +18,7 @@ brew install --cask visual-studio-code
 brew install coreutils
 brew install fzf
 brew install ghq
+brew install gh
 brew install git
 brew install jq
 brew install peco
