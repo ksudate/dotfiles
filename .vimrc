@@ -17,6 +17,7 @@ call plug#begin()
   Plug 'tmrekk121/prev-md.vim'
   Plug 'lambdalisue/fern.vim'
   Plug 'bkad/CamelCaseMotion'
+  Plug 'tyru/eskk.vim'
 call plug#end()
 
 " vim-lsp setting
@@ -201,6 +202,10 @@ nnoremap <leader>gl :Gclog<CR>
 let g:sonictemplate_vim_template_dir = [
       \ '~/dotfiles/template'
       \]
+" eskk.vim
+let g:eskk#directory = "~/.config/eskk"
+let g:eskk#dictionary = { 'path': "~/.config/eskk/my_jisyo", 'sorted': 1, 'encoding': 'utf-8',}
+let g:eskk#large_dictionary = {'path': "~/.config/eskk/SKK-JISYO.L", 'sorted': 1, 'encoding': 'euc-jp',}
 
 let g:auto_prev_time = 7000
 let g:prev_md_auto_update = 1
