@@ -18,6 +18,8 @@ call plug#begin()
   Plug 'lambdalisue/fern.vim'
   Plug 'bkad/CamelCaseMotion'
   Plug 'tyru/eskk.vim'
+  Plug 'mileszs/ack.vim'
+  Plug 'thinca/vim-qfreplace'
 call plug#end()
 
 " vim-lsp setting
@@ -189,6 +191,7 @@ autocmd FileType zsh         setlocal sw=2 sts=2 ts=2 et
 autocmd FileType sh         setlocal sw=2 sts=2 ts=2 et
 autocmd FileType yml         setlocal sw=2 sts=2 ts=2 et
 autocmd FileType yaml        setlocal sw=2 sts=2 ts=2 et
+autocmd FileType cue        setlocal sw=2 sts=2 ts=2 et
 " Fern setting
 map <C-n> :Fern . -drawer -toggle<CR>
 " Quickrun Setting
