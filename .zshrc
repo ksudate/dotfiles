@@ -141,3 +141,7 @@ setopt hist_ignore_dups
 # share command history
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 shopt -u histappend
+# run tmux at terminal startup
+if [ $SHLVL = 1 ]; then
+  tmux
+fi

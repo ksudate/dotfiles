@@ -1,3 +1,5 @@
+"""" PLUGIN
+
 call plug#begin()
   Plug 'prabirshrestha/vim-lsp'
   Plug 'vim-airline/vim-airline'
@@ -22,6 +24,8 @@ call plug#begin()
   Plug 'thinca/vim-qfreplace'
   Plug 'hashivim/vim-terraform'
 call plug#end()
+
+"""" LSP
 
 " vim-lsp setting
 let g:lsp_diagnostics_enabled = 1
