@@ -30,6 +30,10 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt hist_ignore_dups
+# コマンドの履歴を共有
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+shopt -u histappend
+
 bindkey -e
 
 alias tex='sh tex.sh'
@@ -45,7 +49,7 @@ alias relogin='exec $SHELL -l'
 if [ $(uname -m) = 'x86_64' ]; then
   alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin brew"
 fi
-# Rails　関連
+# Rails 関連
 alias rs='bundle exec rails'
 # docker 関連
 alias d='docker'
@@ -71,7 +75,6 @@ alias awsp="source _awsp"
 
 export PATH="$PATH:~/.bin"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-
 
 # pure settings
 #fpath+=$HOME/.zsh/pure
@@ -111,8 +114,6 @@ if [ -f '/Users/e175754/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/e175754
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/e175754/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/e175754/google-cloud-sdk/completion.zsh.inc'; fi
-source <(kubectl completion zsh)
-source <(helm completion zsh)
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -123,4 +124,10 @@ PATH=/usr/local/Cellar/dosfstools/4.2/sbin:$PATH
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
-. /usr/local/opt/asdf/asdf.sh
+source <(helm completion zsh)
+
+. /usr/local/opt/asdf/libexec/asdf.sh
+
+# kubectl setting
+source <(kubectl completion zsh)
+compdef __start_kubectl k

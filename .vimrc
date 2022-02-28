@@ -20,6 +20,7 @@ call plug#begin()
   Plug 'tyru/eskk.vim'
   Plug 'mileszs/ack.vim'
   Plug 'thinca/vim-qfreplace'
+  Plug 'hashivim/vim-terraform'
 call plug#end()
 
 " vim-lsp setting
@@ -215,3 +216,14 @@ let g:prev_md_auto_update = 1
 
 let g:camelcasemotion_key = '<leader>'
 nmap <Esc><Esc> :nohl<CR>
+
+" quickfix-windowのデフォルトの表示位置を左端に変更
+autocmd FileType qf wincmd H
+" quickfix-windowを開き、modifiableに設定し、Windowサイズを調整
+function! OpenQuickfixWindow()
+        cw
+        set modifiable
+        vertical resize 70
+endfunction
+
+autocmd QuickfixCmdPost vimgrep call OpenQuickfixWindow()
