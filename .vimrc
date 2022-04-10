@@ -1,3 +1,5 @@
+"""" PLUGIN
+
 call plug#begin()
   Plug 'prabirshrestha/vim-lsp'
   Plug 'vim-airline/vim-airline'
@@ -19,7 +21,12 @@ call plug#begin()
   Plug 'bkad/CamelCaseMotion'
   Plug 'thinca/vim-qfhl'
   Plug 'thinca/vim-qfreplace'
+  Plug 'tyru/eskk.vim'
+  Plug 'mileszs/ack.vim'
+  Plug 'hashivim/vim-terraform'
 call plug#end()
+
+"""" LSP
 
 " vim-lsp setting
 let g:lsp_diagnostics_enabled = 1
@@ -190,6 +197,7 @@ autocmd FileType zsh         setlocal sw=2 sts=2 ts=2 et
 autocmd FileType sh         setlocal sw=2 sts=2 ts=2 et
 autocmd FileType yml         setlocal sw=2 sts=2 ts=2 et
 autocmd FileType yaml        setlocal sw=2 sts=2 ts=2 et
+autocmd FileType cue        setlocal sw=2 sts=2 ts=2 et
 " Fern setting
 map <C-n> :Fern . -drawer -toggle<CR>
 " Quickrun Setting
@@ -197,12 +205,16 @@ map <leader>q :QuickRun<CR>
 " vim-fugitive Setting
 nnoremap <leader>ga :Git add .<CR>
 nnoremap <leader>gc :Git commit<CR>
-nnoremap <leader>gp :Gpush<CR>
+nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gd :Gdiff<CR>
-nnoremap <leader>gl :Glog<CR>
+nnoremap <leader>gl :Gclog<CR>
 let g:sonictemplate_vim_template_dir = [
       \ '~/dotfiles/template'
       \]
+" eskk.vim
+let g:eskk#directory = "~/.config/eskk"
+let g:eskk#dictionary = { 'path': "~/.config/eskk/my_jisyo", 'sorted': 1, 'encoding': 'utf-8',}
+let g:eskk#large_dictionary = {'path': "~/.config/eskk/SKK-JISYO.L", 'sorted': 1, 'encoding': 'euc-jp',}
 
 let g:auto_prev_time = 7000
 let g:prev_md_auto_update = 1
@@ -210,14 +222,13 @@ let g:prev_md_auto_update = 1
 let g:camelcasemotion_key = '<leader>'
 nmap <Esc><Esc> :nohl<CR>
 
-" Quickfix
+" quickfix-windowのデフォルトの表示位置を左端に変更
 autocmd FileType qf wincmd H
-function! OpenModifiableQF()
+" quickfix-windowを開き、modifiableに設定し、Windowサイズを調整
+function! OpenQuickfixWindow()
         cw
         set modifiable
         vertical resize 70
-        wincmd h
 endfunction
 
-autocmd QuickfixCmdPost vimgrep call OpenModifiableQF()
-nnoremap <leader>qf :Qfreplace<CR>
+autocmd QuickfixCmdPost vimgrep call OpenQuickfixWindow()

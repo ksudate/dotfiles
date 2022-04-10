@@ -19,6 +19,7 @@ brew install --cask lens
 brew install coreutils
 brew install fzf
 brew install ghq
+brew install gh
 brew install git
 brew install jq
 brew install peco
@@ -29,6 +30,7 @@ brew install tig
 brew install tmux
 brew install tree
 brew install vim
+brew install yarn
 brew install zsh
 brew install zsh-completions
 brew install gh
