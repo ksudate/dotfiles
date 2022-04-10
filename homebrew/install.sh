@@ -14,6 +14,7 @@ brew install --cask deepl
 brew install --cask clipy
 brew install --cask biscuit
 brew install --cask visual-studio-code
+brew install --cask lens
 
 brew install coreutils
 brew install fzf
@@ -30,6 +31,7 @@ brew install tree
 brew install vim
 brew install zsh
 brew install zsh-completions
+brew install gh
 # terraform related
 brew install tfenv
 # cloudformation related

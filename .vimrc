@@ -17,6 +17,8 @@ call plug#begin()
   Plug 'tmrekk121/prev-md.vim'
   Plug 'lambdalisue/fern.vim'
   Plug 'bkad/CamelCaseMotion'
+  Plug 'thinca/vim-qfhl'
+  Plug 'thinca/vim-qfreplace'
 call plug#end()
 
 " vim-lsp setting
@@ -207,3 +209,15 @@ let g:prev_md_auto_update = 1
 
 let g:camelcasemotion_key = '<leader>'
 nmap <Esc><Esc> :nohl<CR>
+
+" Quickfix
+autocmd FileType qf wincmd H
+function! OpenModifiableQF()
+        cw
+        set modifiable
+        vertical resize 70
+        wincmd h
+endfunction
+
+autocmd QuickfixCmdPost vimgrep call OpenModifiableQF()
+nnoremap <leader>qf :Qfreplace<CR>

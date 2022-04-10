@@ -44,6 +44,8 @@ alias relogin='exec $SHELL -l'
 # brew path
 if [ $(uname -m) = 'x86_64' ]; then
   alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin brew"
+else
+  PATH=/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:
 fi
 # Rails　関連
 alias rs='bundle exec rails'
@@ -114,7 +116,7 @@ if [ -f '/Users/e175754/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/e
 source <(kubectl completion zsh)
 source <(helm completion zsh)
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+brew -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # mikanos tmp
 PATH=/usr/local/opt/llvm@9/bin:$PATH
@@ -124,3 +126,6 @@ PATH=/usr/local/Cellar/dosfstools/4.2/sbin:$PATH
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 . /usr/local/opt/asdf/asdf.sh
+
+source <(stern --completion=zsh)
+
