@@ -2,9 +2,7 @@
 
 call plug#begin()
   Plug 'prabirshrestha/vim-lsp'
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
-  Plug 'gkeep/iceberg-dark'
+  Plug 'arcticicestudio/nord-vim'
   Plug 'mattn/vim-lsp-settings'
   Plug 'prabirshrestha/asyncomplete.vim'
   Plug 'prabirshrestha/asyncomplete-lsp.vim'
@@ -132,9 +130,11 @@ set number
 set scrolloff=3
 set lazyredraw
 set ttyfast
-"set cursorline
+" set cursorline
 set clipboard=unnamed
 set backspace=indent,eol,start
+
+set laststatus=2
 
 nnoremap <CR> A<CR><ESC>
 
@@ -147,21 +147,9 @@ syntax enable
 set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-set background=dark
-colorscheme iceberg
-let g:airline_theme='icebergDark'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_section_a = airline#section#create(['mode'])
-let g:airline#extensions#default#layout = [
-  \ [ 'a', 'c' ],
-  \ [ 'z']
-  \ ]
-let g:airline_section_z = airline#section#create(['linenr'])
-let g:airline#extensions#tabline#tab_nr_type = 1
-let g:airline#extensions#tabline#show_tab_count = 0
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline#extensions#tabline#show_buffers = 0
-"let g:airline_disable_statusline = 1
+
+"colorscheme nord
+colorscheme nord
 
 set showmatch
 set visualbell

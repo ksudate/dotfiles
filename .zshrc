@@ -155,6 +155,6 @@ setopt EXTENDED_HISTORY
 setopt share_history
 
 # run tmux at terminal startup
-if [ $SHLVL = 1 ]; then
-  tmux
-fi
+# if [ $SHLVL = 1 ]; then
+#   tmux
+# fi
