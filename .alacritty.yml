@@ -23,7 +23,7 @@
   # available, otherwise `xterm-256color` is used.
   # TERM: alacritty
 
-#window:
+window:
   # Window dimensions (changes require restart)
   #
   # Number of lines/columns (not pixels) in the terminal. The number of columns
@@ -67,7 +67,7 @@
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  #opacity: 1.0
+  opacity: 0.9
 
   # Startup Mode (changes require restart)
   #
@@ -781,6 +781,7 @@ live_config_reload: true
 key_bindings:
   - { key: Q,                mods: Control,   chars: "\x11"                     }
   - { key: "LBracket",       mods: Control,   chars: "\x1b"                     }
+  - { key: Minus,            mods: Command|Shift, action: IncreaseFontSize      }
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }
   #- { key: L,         mods: Control,                    action: ClearLogNotice }
