@@ -22,6 +22,7 @@ call plug#begin()
   Plug 'tyru/eskk.vim'
   Plug 'mileszs/ack.vim'
   Plug 'hashivim/vim-terraform'
+  Plug 'itchyny/lightline.vim'
 call plug#end()
 
 """" LSP
@@ -150,6 +151,10 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 "colorscheme nord
 colorscheme nord
+
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ }
 
 set showmatch
 set visualbell
