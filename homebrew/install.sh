@@ -60,6 +60,12 @@ brew install shfmt
 brew tap sanemat/font
 brew install ricty --with-powerline
 
+brew tap delphinus/sfmono-square
+brew install sfmono-square
+
+# open fonts with Finder
+# open "$(brew --prefix sfmono-square)/share/fonts"
+
 # lang
 brew install nodebrew
 brew install go
