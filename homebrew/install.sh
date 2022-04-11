@@ -3,6 +3,7 @@
 which brew || curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
 brew update
 
+brew install --cask alacritty
 brew install --cask alfred
 brew install --cask biscuit
 brew install --cask clipy
