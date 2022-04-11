@@ -36,7 +36,7 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 if [ $(uname -m) = 'x86_64' ]; then
   alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin brew"
 else
-  PATH=/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:
+  PATH=/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/usr/local/bin:
 fi
 
 #### ALIAS
