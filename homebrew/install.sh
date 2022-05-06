@@ -18,6 +18,7 @@ brew install --cask slack
 brew install --cask visual-studio-code
 brew install --cask zoomus
 
+brew install argocd
 brew install coreutils
 brew install fzf
 brew install ghq
