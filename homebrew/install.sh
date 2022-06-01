@@ -20,6 +20,7 @@ brew install --cask zoomus
 
 brew install argocd
 brew install coreutils
+brew install fluxcd/tap/flux
 brew install fzf
 brew install ghq
 brew install gh
@@ -36,7 +37,6 @@ brew install vim
 brew install yarn
 brew install zsh
 brew install zsh-completions
-brew install gh
 
 # terraform related
 brew install tfenv
@@ -45,18 +45,19 @@ brew install tfenv
 brew install cfn-lint
 
 # k8s related
-brew install k9s
-brew install kubectx
-brew install helm
+brew install asdf
 brew install aquasecurity/trivy/trivy
 brew install conftest
+brew install helm
+brew install kind
+brew install kubectx
+brew install k9s
 brew install stern
-brew install asdf
 
 # linter
-brew install yamllint
 brew install shellcheck
 brew install shfmt
+brew install yamllint
 
 # font
 brew tap sanemat/font
