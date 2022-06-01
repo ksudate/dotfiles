@@ -29,6 +29,7 @@ brew install jq
 brew install peco
 brew install pwgen
 brew install redis
+brew install rbenv
 brew install starship
 brew install tig
 brew install tmux
