@@ -11,6 +11,7 @@ brew install --cask deepl
 brew install --cask discord
 brew install --cask docker
 brew install --cask google-chrome
+brew install --cask gather
 brew install --cask iterm2
 brew install --cask lens
 brew install --cask notion
