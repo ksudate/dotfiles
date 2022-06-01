@@ -74,4 +74,7 @@ brew install sfmono-square
 
 # lang
 brew install nodebrew
+nodebrew setup
+nodebrew install latest
+# nodebrew use v10.20.1
 brew install go
