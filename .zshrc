@@ -105,7 +105,7 @@ zle -N peco-src
 bindkey '^]' peco-src
 
 # iterm2
-source "${HOME}/.iterm2_shell_integration.zsh"
+# source "${HOME}/.iterm2_shell_integration.zsh"
 
 # asdf
 if [ $(uname -m) = 'x86_64' ]; then
