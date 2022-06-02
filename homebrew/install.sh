@@ -54,6 +54,7 @@ brew install conftest
 brew install helm
 brew install kind
 brew install kubectx
+brew install kustomize
 brew install k9s
 brew install stern
 
