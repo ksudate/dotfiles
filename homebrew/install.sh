@@ -18,6 +18,8 @@ brew install --cask notion
 brew install --cask slack
 brew install --cask visual-studio-code
 brew install --cask zoomus
+brew install --cask 1password-cli
+brew install --cask 1password
 
 brew install argocd
 brew install coreutils
