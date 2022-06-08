@@ -34,6 +34,7 @@ brew install pwgen
 brew install redis
 brew install rbenv
 brew install starship
+brew install tektoncd-cli
 brew install tig
 brew install tmux
 brew install tree
