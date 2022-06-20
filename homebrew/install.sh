@@ -30,6 +30,7 @@ brew install gh
 brew install git
 brew install jq
 brew install peco
+brew install protobuf
 brew install pwgen
 brew install redis
 brew install rbenv
