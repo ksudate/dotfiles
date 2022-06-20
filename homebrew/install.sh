@@ -28,6 +28,7 @@ brew install fzf
 brew install ghq
 brew install gh
 brew install git
+brew install grpcurl
 brew install jq
 brew install peco
 brew install protobuf
