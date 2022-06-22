@@ -102,7 +102,7 @@ fi
 zle clear-screen
 }
 zle -N peco-src
-bindkey '^]' peco-src
+bindkey '^b' peco-src
 
 # iterm2
 # source "${HOME}/.iterm2_shell_integration.zsh"

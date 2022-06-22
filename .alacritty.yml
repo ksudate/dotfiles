@@ -781,6 +781,7 @@ live_config_reload: true
 key_bindings:
   - { key: Q,                mods: Control,   chars: "\x11"                     }
   - { key: "LBracket",       mods: Control,   chars: "\x1b"                     }
+  - { key: Backslash,        mods: Alt,               chars: "\x5c"             }
   - { key: Minus,            mods: Command|Shift, action: IncreaseFontSize      }
   - { key: Right,            mods: Alt, chars: "\x1BF"                          }
   - { key: Left,             mods: Alt, chars: "\x1BB"                          }

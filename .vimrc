@@ -23,6 +23,7 @@ call plug#begin()
   Plug 'mileszs/ack.vim'
   Plug 'hashivim/vim-terraform'
   Plug 'itchyny/lightline.vim'
+  Plug 'mattn/vim-goimports'
 call plug#end()
 
 """" LSP
