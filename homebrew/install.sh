@@ -43,7 +43,7 @@ brew install tree
 brew install vim
 brew install wget
 brew install yarn
-brew install yq
+brew install python-yq
 brew install zsh
 brew install zsh-completions
 
