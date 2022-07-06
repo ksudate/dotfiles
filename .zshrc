@@ -102,7 +102,7 @@ fi
 zle clear-screen
 }
 zle -N peco-src
-bindkey '^b' peco-src
+bindkey '^v' peco-src
 
 # iterm2
 # source "${HOME}/.iterm2_shell_integration.zsh"
@@ -158,3 +158,5 @@ setopt share_history
 # if [ $SHLVL = 1 ]; then
 #   tmux
 # fi
+
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
