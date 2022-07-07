@@ -66,6 +66,9 @@ brew install kustomize
 brew install k9s
 brew install stern
 
+brew tap weaveworks/tap
+brew install weaveworks/tap/eksctl
+
 # linter
 brew install shellcheck
 brew install shfmt
