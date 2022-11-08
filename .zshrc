@@ -32,6 +32,9 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+# export PATH="$HOME/istio-1.15.2/bin:$PATH"
+export PATH="$HOME/istio-0.0.0-ambient.191fe680b52c1754ee72a06b3e0d3f9d116f2e82/bin:$PATH"
+
 # brew path
 if [ $(uname -m) = 'x86_64' ]; then
   alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin brew"
@@ -68,8 +71,7 @@ alias tmuxa='tmux new-session \; source-file ~/.tmux/new_session'
 
 # k8s
 alias k='kubectl'
-alias kc='kubectx | peco | xargs kubectx'
-alias kn='kubens | peco | xargs kubens'
+alias kc='kubie ctx'
 
 # git
 alias g='git'

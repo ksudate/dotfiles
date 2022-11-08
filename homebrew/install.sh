@@ -30,6 +30,7 @@ brew install gh
 brew install git
 brew install grpcurl
 brew install jq
+brew install mysql
 brew install peco
 brew install protobuf
 brew install pwgen
@@ -62,6 +63,7 @@ brew install helm
 brew install kind
 brew install kubectx
 brew install kubeconform
+brew install kubie
 brew install kustomize
 brew install k9s
 brew install stern

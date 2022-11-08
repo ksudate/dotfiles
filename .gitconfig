@@ -3,6 +3,7 @@
 [user]
 	name = ksudate
 	email = ksudate@outlook.jp
+	signingkey = 6413927E825177EA
 [core]
 	autoCRLF = false
 [ghq]
@@ -16,3 +17,9 @@
 	l = log
 	co = checkout
         cb = co -b
+[gpg]
+	program = gpg
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
