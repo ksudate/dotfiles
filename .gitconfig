@@ -15,6 +15,7 @@
 	d = diff
 	s = status
 	l = log
+        pp = pull --prune
 	co = checkout
         cb = co -b
 [gpg]

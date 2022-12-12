@@ -139,7 +139,7 @@ source <(helm completion zsh)
 source <(stern --completion=zsh)
 
 # flux
-. <(flux completion bash)
+. <(flux completion zsh)
 
 # zsh
 fpath=(path/to/zsh-completions/src $fpath)
