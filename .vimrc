@@ -24,6 +24,7 @@ call plug#begin()
   Plug 'hashivim/vim-terraform'
   Plug 'itchyny/lightline.vim'
   Plug 'mattn/vim-goimports'
+  Plug 'jjo/vim-cue'
 call plug#end()
 
 """" LSP

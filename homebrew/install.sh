@@ -30,6 +30,7 @@ brew install gh
 brew install git
 brew install grpcurl
 brew install jq
+brew install kyverno
 brew install mysql
 brew install peco
 brew install protobuf
