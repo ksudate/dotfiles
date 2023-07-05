@@ -23,6 +23,7 @@ brew install --cask 1password
 
 brew install argocd
 brew install coreutils
+brew install cue
 brew install fluxcd/tap/flux
 brew install fzf
 brew install ghq
