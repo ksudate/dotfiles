@@ -32,8 +32,11 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+# aqua
+export AQUA_GLOBAL_CONFIG="$(aqua root-dir)/aqua.yaml"
+export PATH="$(aqua root-dir)/bin:$PATH"
+
 # export PATH="$HOME/istio-1.15.2/bin:$PATH"
-export PATH="$HOME/istio-0.0.0-ambient.191fe680b52c1754ee72a06b3e0d3f9d116f2e82/bin:$PATH"
 
 # brew path
 if [ $(uname -m) = 'x86_64' ]; then
@@ -139,7 +142,7 @@ source <(helm completion zsh)
 source <(stern --completion=zsh)
 
 # flux
-. <(flux completion zsh)
+# . <(flux completion zsh)
 
 # zsh
 fpath=(path/to/zsh-completions/src $fpath)

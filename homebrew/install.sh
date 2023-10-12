@@ -22,9 +22,9 @@ brew install --cask 1password-cli
 brew install --cask 1password
 
 brew install argocd
+brew install aquaproj/aqua/aqua
 brew install coreutils
 brew install cue
-brew install fluxcd/tap/flux
 brew install fzf
 brew install ghq
 brew install gh
@@ -66,7 +66,6 @@ brew install kind
 brew install kubectx
 brew install kubeconform
 brew install kubie
-brew install kustomize
 brew install k9s
 brew install stern
 
