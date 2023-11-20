@@ -33,6 +33,7 @@ brew install grpcurl
 brew install jq
 brew install kyverno
 brew install mysql
+brew install orbstack
 brew install peco
 brew install protobuf
 brew install pwgen
