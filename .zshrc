@@ -109,16 +109,6 @@ zle clear-screen
 zle -N peco-src
 bindkey '^v' peco-src
 
-# iterm2
-# source "${HOME}/.iterm2_shell_integration.zsh"
-
-# asdf
-if [ $(uname -m) = 'x86_64' ]; then
-  . /usr/local/opt/asdf/libexec/asdf.sh
-else
-  . /opt/homebrew/opt/asdf/libexec/asdf.sh
-fi
-
 # llvm
 export LLVM_DIR=/usr/local/Cellar/llvm/9.0.1/lib/cmake
 
@@ -142,7 +132,7 @@ source <(helm completion zsh)
 source <(stern --completion=zsh)
 
 # flux
-# . <(flux completion zsh)
+. <(flux completion zsh)
 
 # zsh
 fpath=(path/to/zsh-completions/src $fpath)
@@ -177,7 +167,7 @@ if [ -f '/Users/kentaro.sudate/Downloads/google-cloud-sdk/completion.zsh.inc' ];
 
 
 #### GitHub Actions
-#
+
 # 実行する
 alias gh-run='gh workflow run .github/workflows/$workflow --ref $(git branch --show-current)'
 # 実行を見守る
