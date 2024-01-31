@@ -117,6 +117,12 @@ let g:lsp_settings = {
   \   },
   \ }
 
+" copilot
+let g:copilot_filetypes = {
+    \ 'markdown': v:true,
+    \ 'yaml': v:true,
+    \ }
+
 " vimgrep
 nnoremap [q :cprevious<CR>
 nnoremap ]q :cnext<CR>
