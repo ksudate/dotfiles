@@ -16,8 +16,9 @@
 	s = status
 	l = log
         pp = pull --prune
-	co = checkout
-        cb = co -b
+	sw = switch
+        sc = sw -c
+        rs = restore
 [gpg]
 	program = gpg
 [commit]
