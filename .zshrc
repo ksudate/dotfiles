@@ -14,11 +14,6 @@ fi
 
 # vim
 export EDITOR=vim
-export PATH="/Users/e175754/Library/Python/3.8/bin:$PATH"
-
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init - zsh)"
 
 # golang
 export GOPATH="$HOME/go"
@@ -28,13 +23,13 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
 export PATH="$PATH:~/.bin"
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # aqua
-export AQUA_GLOBAL_CONFIG="$(aqua root-dir)/aqua.yaml"
-export PATH="$(aqua root-dir)/bin:$PATH"
+export PATH="${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH"
+
 
 # export PATH="$HOME/istio-1.15.2/bin:$PATH"
 
@@ -42,7 +37,7 @@ export PATH="$(aqua root-dir)/bin:$PATH"
 if [ $(uname -m) = 'x86_64' ]; then
   alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin brew"
 else
-  PATH=/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/usr/local/bin:
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 #### ALIAS
@@ -157,7 +152,7 @@ setopt share_history
 #   tmux
 # fi
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/kentaro.sudate/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kentaro.sudate/Downloads/google-cloud-sdk/path.zsh.inc'; fi

@@ -1,20 +1,14 @@
 #!/bin/bash
 
-which brew || curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew update
 
 brew install --cask alacritty
-brew install --cask alfred
-brew install --cask biscuit
-brew install --cask clipy
 brew install --cask deepl
-brew install --cask discord
-brew install --cask docker
 brew install --cask google-chrome
 brew install --cask gather
-brew install --cask iterm2
-brew install --cask lens
 brew install --cask notion
+brew install --cask raycast
 brew install --cask slack
 brew install --cask visual-studio-code
 brew install --cask zoomus
@@ -59,19 +53,14 @@ brew install tfenv
 brew install cfn-lint
 
 # k8s related
-brew install asdf
 brew install aquasecurity/trivy/trivy
 brew install conftest
 brew install helm
 brew install kind
-brew install kubectx
 brew install kubeconform
 brew install kubie
 brew install k9s
 brew install stern
-
-brew tap weaveworks/tap
-brew install weaveworks/tap/eksctl
 
 # linter
 brew install shellcheck
