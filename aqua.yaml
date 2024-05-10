@@ -8,9 +8,9 @@
 #   - all
 registries:
 - type: standard
-  ref: v4.62.0 # renovate: depName=aquaproj/aqua-registry
+  ref: v4.175.0 # renovate: depName=aquaproj/aqua-registry
 packages:
-- name: kubernetes/kubectl@v1.29.4
-- name: kubernetes-sigs/kustomize@kustomize/v5.3.0
-- name: istio/istio/istioctl@1.19.3
-- name: fluxcd/flux2@v2.1.1
+- name: kubernetes/kubectl@v1.30.0
+- name: kubernetes-sigs/kustomize@kustomize/v5.4.1
+- name: istio/istio/istioctl@1.21.2
+- name: fluxcd/flux2@v2.2.3

@@ -28,6 +28,7 @@ export PATH="$HOME/.nodebrew/current/bin:$PATH"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # aqua
+export AQUA_GLOBAL_CONFIG="$(aqua root-dir)/aqua.yaml"
 export PATH="${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH"
 
 
@@ -73,7 +74,7 @@ alias kc='kubie ctx'
 
 # git
 alias g='git'
-alias gc='git b | peco | xargs git co'
+alias gc='git b | peco | xargs git sw'
 
 # aws
 alias pf="env | grep AWS"
