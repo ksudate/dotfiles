@@ -3,7 +3,7 @@
 [user]
 	name = ksudate
 	email = ksudate@outlook.jp
-	signingkey = 6413927E825177EA
+	signingkey = 38FB3E27C6A0EF64
 [core]
 	autoCRLF = false
 [ghq]
