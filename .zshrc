@@ -12,6 +12,13 @@ fi
 
 #### PATH
 
+# brew path
+if [ $(uname -m) = 'x86_64' ]; then
+  alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin brew"
+else
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 # vim
 export EDITOR=vim
 
@@ -28,18 +35,8 @@ export PATH="$HOME/.nodebrew/current/bin:$PATH"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # aqua
-export AQUA_GLOBAL_CONFIG="$(aqua root-dir)/aqua.yaml"
 export PATH="${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH"
-
-
-# export PATH="$HOME/istio-1.15.2/bin:$PATH"
-
-# brew path
-if [ $(uname -m) = 'x86_64' ]; then
-  alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin brew"
-else
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
+export AQUA_GLOBAL_CONFIG="$(aqua root-dir)/aqua.yaml"
 
 #### ALIAS
 
@@ -91,6 +88,8 @@ bindkey -M viins '^K'  up-line-or-history
 
 bindkey '^R' history-incremental-search-backward
 
+bindkey '^ ' autosuggest-accept
+
 #### PLUGIN
 
 # peco+ghq
@@ -108,12 +107,18 @@ bindkey '^v' peco-src
 # llvm
 export LLVM_DIR=/usr/local/Cellar/llvm/9.0.1/lib/cmake
 
+# zsh
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
+
 # starship
 eval "$(starship init zsh)"
 
-#### COMPLETION
-
-autoload -U compinit; compinit
 # ignore upper & lower case
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
@@ -129,9 +134,6 @@ source <(stern --completion=zsh)
 
 # flux
 . <(flux completion zsh)
-
-# zsh
-fpath=(path/to/zsh-completions/src $fpath)
 
 #### ETC
 
