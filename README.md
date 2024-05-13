@@ -2,6 +2,8 @@
 
 ## Plugin Manager
 
+https://github.com/junegunn/vim-plug
+
 ```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -11,9 +13,9 @@ Press :PlugInstall
 
 # Setup Tmux
 
-https://github.com/tmux-plugins/tpm
-
 ## Plugin Manager
+
+https://github.com/tmux-plugins/tpm
 
 ```
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
