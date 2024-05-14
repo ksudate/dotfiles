@@ -5,6 +5,7 @@ brew update
 
 brew install --cask alacritty
 brew install --cask deepl
+brew install --cask docker
 brew install --cask google-chrome
 brew install --cask gather
 brew install --cask notion
