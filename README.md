@@ -48,3 +48,12 @@ ln -s $HOME/go/src/github.com/ksudate/dotfiles/ignore $HOME/ignore
 ln -s $HOME/go/src/github.com/ksudate/dotfiles/kubie.yaml $HOME/.kube/kubie.yaml
 ln -s $HOME/go/src/github.com/ksudate/dotfiles/starship.toml $HOME/.config/starship.toml
 ```
+
+# Install SF Mono Square
+
+```
+ open "$(brew --prefix sfmono-square)/share/fonts"
+```
+
+1. Open SFMonoSquare-Regular.otf
+2. Install in Font Book

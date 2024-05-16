@@ -156,21 +156,3 @@ setopt share_history
 # fi
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/kentaro.sudate/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kentaro.sudate/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/kentaro.sudate/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kentaro.sudate/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
-
-#### GitHub Actions
-
-# 実行する
-alias gh-run='gh workflow run .github/workflows/$workflow --ref $(git branch --show-current)'
-# 実行を見守る
-alias gh-watch='gh run list --workflow=$workflow | grep $(git branch --show-current) | cut -f 7 | head -n 1 | xargs gh run watch'
-# 結果を確認
-alias gh-view='gh run list --workflow=$workflow | grep $(git branch --show-current) | cut -f 7 | head -n 1 | xargs gh run view'
-# ログを確認
-alias gh-log='gh run list --workflow=$workflow | grep $(git branch --show-current) | cut -f 7 | head -n 1 | xargs gh run view --log'
