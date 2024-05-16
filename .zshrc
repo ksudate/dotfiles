@@ -40,15 +40,12 @@ export AQUA_GLOBAL_CONFIG="$(aqua root-dir)/aqua.yaml"
 
 #### ALIAS
 
-alias tex='sh tex.sh'
-alias ide='sh ide.sh'
-alias box='sh box.sh'
-alias mk='sh mk.sh'
 alias ls='ls -FG'
 alias la='ls -aFG'
 alias ll='ls -lFG'
 alias lla='ls -laFG'
 alias relogin='exec $SHELL -l'
+alias clean_branch='git branch | grep -Ev "master|main" | xargs git branch -D'
 
 # rails
 alias rs='bundle exec rails'
