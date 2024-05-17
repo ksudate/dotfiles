@@ -45,7 +45,10 @@ alias la='ls -aFG'
 alias ll='ls -lFG'
 alias lla='ls -laFG'
 alias relogin='exec $SHELL -l'
+
+# git
 alias clean_branch='git branch | grep -Ev "master|main" | xargs git branch -D'
+alias reset_master='git reset --hard origin/master'
 
 # rails
 alias rs='bundle exec rails'
