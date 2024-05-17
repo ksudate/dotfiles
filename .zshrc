@@ -47,7 +47,7 @@ alias lla='ls -laFG'
 alias relogin='exec $SHELL -l'
 
 # git
-alias clean_branch='git branch | grep -Ev "master|main" | xargs git branch -D'
+alias clean_branch="git branch --merged|egrep -v '\*|develop|main|master'|xargs git branch -d"
 alias reset_master='git reset --hard origin/master'
 
 # rails
