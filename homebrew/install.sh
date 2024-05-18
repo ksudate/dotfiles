@@ -45,6 +45,7 @@ brew install wget
 brew install yarn
 brew install python-yq
 brew install zsh
+brew install zsh-autosuggestions
 brew install zsh-completions
 
 # terraform related

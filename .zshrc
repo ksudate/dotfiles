@@ -38,6 +38,9 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH"
 export AQUA_GLOBAL_CONFIG="$(aqua root-dir)/aqua.yaml"
 
+# flutterfire
+export PATH="$HOME/.pub-cache/bin:$PATH"
+
 #### ALIAS
 
 alias ls='ls -FG'
