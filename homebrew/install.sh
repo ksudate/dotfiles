@@ -24,6 +24,7 @@ brew install fzf
 brew install ghq
 brew install gh
 brew install git
+brew install gnupg
 brew install grpcurl
 brew install jq
 brew install kyverno
