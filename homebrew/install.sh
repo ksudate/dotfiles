@@ -65,6 +65,12 @@ brew install kubie
 brew install k9s
 brew install stern
 
+# nvim related
+brew install luarocks
+brew install rg
+brew install fd
+brew install lazygit
+
 # linter
 brew install shellcheck
 brew install shfmt
@@ -73,6 +79,7 @@ brew install yamllint
 # font
 brew tap sanemat/font
 brew install ricty --with-powerline
+brew install font-hackgen-nerd
 
 brew tap delphinus/sfmono-square
 brew install sfmono-square

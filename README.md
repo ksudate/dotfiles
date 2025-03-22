@@ -44,7 +44,7 @@ ln -s $HOME/go/src/github.com/ksudate/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -s $HOME/go/src/github.com/ksudate/dotfiles/.vimrc $HOME/.vimrc
 ln -s $HOME/go/src/github.com/ksudate/dotfiles/.zshrc $HOME/.zshrc
 ln -s $HOME/go/src/github.com/ksudate/dotfiles/aqua.yaml $(aqua root-dir)/aqua.yaml
-ln -s $HOME/go/src/github.com/ksudate/dotfiles/ignore $HOME/ignore
+ln -s $HOME/go/src/github.com/ksudate/dotfiles/ignore $HOME/.config/git/ignore
 ln -s $HOME/go/src/github.com/ksudate/dotfiles/kubie.yaml $HOME/.kube/kubie.yaml
 ln -s $HOME/go/src/github.com/ksudate/dotfiles/starship.toml $HOME/.config/starship.toml
 ```
