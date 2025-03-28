@@ -1,15 +1,13 @@
 live_config_reload = true
 
-import = [
-    "~/.config/alacritty/themes/themes/tokyo-night-storm.toml"
-]
+import = ["~/.config/alacritty/themes/themes/tokyo-night-storm.toml"]
 
 [font]
 size = 16.0
-normal = {family = "HackGen35 Console NF", style = "Regular" }
-bold = {family = "HackGen35 Console NF", style = "Bold" }
-italic = {family = "HackGen35 Console NF", style = "Regular" }
-bold_italic = {family = "HackGen35 Console NF", style = "Bold" }
+normal = { family = "HackGen35 Console NF", style = "Regular" }
+bold = { family = "HackGen35 Console NF", style = "Bold" }
+italic = { family = "HackGen35 Console NF", style = "Regular" }
+bold_italic = { family = "HackGen35 Console NF", style = "Bold" }
 
 [font.offset]
 y = 1
@@ -35,8 +33,8 @@ key = "+"
 mods = "Alt"
 
 [window]
-opacity = 0.6
-blur = true
+opacity = 1.0
+blur = false
 
 [env]
 TERM = "xterm-256color"
