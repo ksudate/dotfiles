@@ -29,7 +29,7 @@ mods = "Alt"
 
 [[keyboard.bindings]]
 action = "IncreaseFontSize"
-key = "+"
+key = "Minus"
 mods = "Alt"
 
 [window]
